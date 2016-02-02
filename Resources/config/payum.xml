@@ -71,8 +71,8 @@
         <!-- Actions -->
 
         <service id="payum.action.get_http_request" class="Payum\Core\Bridge\Symfony\Action\GetHttpRequestAction">
-            <call method="setHttpRequest">
-                <argument type="service" id="request" on-invalid="null" strict="false" />
+            <call method="setHttpRequestStack">
+                <argument type="service" id="request_stack" on-invalid="null" strict="false" />
             </call>
 
             <tag name="payum.action" all="true" alias="get_http_request" />
